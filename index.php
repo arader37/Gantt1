@@ -3,7 +3,7 @@
 require 'bin/functions.php';
 require 'db_configuration.php';
 
-$query = "SELECT * FROM releases ORDER BY app_id";
+$query = "SELECT * FROM releases ORDER BY rtm_date ASC";
 
 $GLOBALS['id'] = mysqli_query($db, $query);
 $GLOBALS['name'] = mysqli_query($db, $query);
@@ -105,7 +105,7 @@ $GLOBALS['app_id'] = mysqli_query($db, $query);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 
 <!--Data Table-->
-<script type="text/javascript" charset="utf8"
+<!--<script type="text/javascript" charset="utf8"
         src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -126,13 +126,13 @@ $GLOBALS['app_id'] = mysqli_query($db, $query);
 <script type="text/javascript" charset="utf8"
         src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
 <script type="text/javascript" charset="utf8"
-        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script> -->
 
 <script type="text/javascript" language="javascript">
     $(document).ready( function () {
         
         $('#ganttTable').DataTable( {
-            dom: 'lfrtBip',
+            
             buttons: [
                 'copy', 'excel', 'csv', 'pdf'
             ] }
