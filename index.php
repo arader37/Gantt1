@@ -94,7 +94,7 @@ $GLOBALS['app_id'] = mysqli_query($db, $query);
         </table>
     </div>
 </div>
-
+<br><br>
 <!-- /.container -->
 <!-- Footer -->
 <footer class="page-footer text-center">
